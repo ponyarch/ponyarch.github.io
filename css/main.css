@@ -3,3 +3,10 @@ body {
   font-family: Roboto, Arial;
   color: #fff;
 }
+
+.logo {
+  font-family: "Henny Penny", system-ui;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2em;
+}
