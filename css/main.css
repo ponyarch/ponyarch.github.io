@@ -1,18 +1,97 @@
 html, body {
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Оставляем 100% для корректной работы Flex-контейнера */
 }
 
 body {
-  background: linear-gradient(135deg,rgba(3, 8, 0, 1) 0%, rgb(8, 20, 0) 100%) no-repeat;
-  font-family: Roboto, Arial;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  font-family: "Neucha", cursive;
+  color: var(--text-color);
 }
 
-.main-text {
+.wrapper {
+  flex: 1; /* Растягивается на всё доступное пространство */
+}
+
+/* Остальные стили оставляем как были */
+:root {
+  --bg-gradient: linear-gradient(135deg,rgb(205, 250, 178) 0%, rgb(169, 226, 131) 100%) no-repeat;
+  --text-color: rgb(3, 8, 0);
+  --menu-color: rgba(0, 0, 0, 25%);
+}
+
+:root img.full-icon, :root img.menu-logo {
+  filter: invert(1);
+}
+
+body.dark-theme {
+  --bg-gradient: linear-gradient(135deg,rgba(3, 8, 0, 1) 0%, rgb(8, 20, 0) 100%) no-repeat;
+  --text-color: #fff;
+  --menu-color: rgba(255, 255, 255, 10%);
+}
+
+body.dark-theme img.full-icon, body.dark-theme img.menu-logo {
+  filter: invert(0);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 2rem; /* Уменьшили высоту */
+  background-color: var(--menu-color);
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem; /* Увеличенный размер шрифта */
+  margin-left: 3rem;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+}
+
+p {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p.funny {
   font-family: "Neucha", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1.25em;
+}
+
+p.bottom-info {
+  font-family: "Neucha", cursive;
+  color: rgba(96, 96, 96, 128);
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.75em;
+}
+
+h2 {
+  font-family: "Neucha", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.25em;
 }
 
 .logo {
@@ -20,4 +99,17 @@ body {
   font-weight: 200;
   font-style: normal;
   font-size: 2em;
+}
+
+.for-main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1em;
+}
+
+footer {
+  text-align: center;
 }

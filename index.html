@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PonyArch.ru - Главная</title>
+    <title>да кому название это вообще нужно ёмаё</title>
     <!-- Стили -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- Шрифты -->
@@ -21,8 +21,67 @@
     <link rel="icon" href="./static/img/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <img src="./static/img/logo.svg" width="128" height="128">
-    <p class="logo">So freaking funny pony almanac lol</p>
-    <p class="main-text">я жирное уёбище, извините</p>
+    <div class="wrapper">
+      <header class="navbar">
+        <div class="logo"><a href="./index.html"><img class="menu-logo" src="./static/img/logo.svg" width="32" height="32"></a></div>
+        <nav class="nav-links">
+          <a href="#">Серии</a>
+          <a href="#">Мысли</a>
+          <a href="#">Матрица</a>
+          <a href="#">Другие сайты</a>
+          <a href="#">Обо мне</a>
+          <a href="#">Контакты</a>
+        </nav>
+        <button id="theme-toggle" class="theme-btn">
+          <svg id="theme-icon" viewBox="0 0 24 24" width="24" height="24" fill="white">
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41M12 7a5 5 0 100 10 5 5 0 000-10z"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="for-main-page">
+        <img class="full-icon" src="./static/img/logo.svg" width="128" height="128">
+        <h2>Добро пожаловать на PonyArch!</h2>
+        <p class="funny">
+          В рамках данного сайта ты сможешь найти всю информацию о мультсериале "Дружба - это чудо!".<br>
+          Здесь есть как "сухая" информация обо всех сериях и всех сезонах мультсериала, так и мои<br>
+          собственные мысли по поводу отдельных серий (включая их оценку), а также некоторые<br>
+          интересные пересечения разных моментов из оригинального мультсериала, фанатского<br>
+          творчества и реального мира вместе взятых.<br><br>
+          Чтобы начать пользоваться сайтом, перейди по ссылкам на меню сверху страницы.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p class="bottom-info">сайт сделал <b>КирOFF</b>, 2026 г.</p>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('theme-toggle');
+
+      // Функция для применения темы
+      const applyTheme = (isDark) => {
+        if (isDark) {
+          document.body.classList.add('dark-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      };
+
+      // Проверка сохраненного состояния при загрузке
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        applyTheme(true);
+      }
+
+      // Обработчик клика
+      btn.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
   </body>
 </html>
