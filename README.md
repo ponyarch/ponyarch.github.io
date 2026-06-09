@@ -1,2 +1,1 @@
-# site
-PonyArch site frontend.
+# 🤫
