@@ -1,7 +1,18 @@
+html, body {
+  height: 100%;
+}
+
 body {
-  background-color: #000;
+  background: linear-gradient(135deg,rgba(3, 8, 0, 1) 0%, rgb(8, 20, 0) 100%) no-repeat;
   font-family: Roboto, Arial;
   color: #fff;
+}
+
+.main-text {
+  font-family: "Neucha", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
 }
 
 .logo {
