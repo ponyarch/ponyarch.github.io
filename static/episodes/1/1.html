@@ -1,0 +1,114 @@
+<!--
+  Воу-воу-воу, вот здесь ТОЧНО ничего пока не меняй!
+  Если ты находишься здесь, то знай - ты частично
+  делаешь себе спойлеры по изменениям в коде сайта.
+
+  Если не лююишь спойлеры, УХОДИ ОТСЮДА!
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>S1E1 - PonyArch</title>
+    <!-- Стили -->
+    <link rel="stylesheet" href="./../../../css/main.css">
+    <link rel="stylesheet" href="./../../../css/series.css">
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    <!-- Иконка сайта -->
+    <link rel="icon" href="./../../img/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="navbar">
+        <div class="logo"><a href="./../../../index.html"><img class="menu-logo" src="./../../img/logo.svg" width="32" height="32"></a></div>
+        <nav class="nav-links">
+          <a href="./../../../series.html">Серии</a>
+          <a href="./characters.html">Персонажи</a>
+          <a href="./../../../minds.html">Мысли</a>
+          <a href="./../../../matrix.html">Матрица</a>
+          <a href="./../../../another.html">Другие сайты</a>
+          <a href="./../../../about.html">Обо мне</a>
+          <a href="./../../../contacts.html">Контакты</a>
+        </nav>
+        <button id="theme-toggle" class="theme-btn">
+          <svg id="theme-icon" viewBox="0 0 24 24" width="24" height="24" fill="white">
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41M12 7a5 5 0 100 10 5 5 0 000-10z"/>
+          </svg>
+        </button>
+      </header>
+
+      <div class="episode-desc">
+        <a href="./../../../series.html">◄ Вернуться назад</a>
+        <h2>Сезон 1, эпизод 1<br>&quot;Магия дружбы. Часть 1&quot;</h2>
+        <div class="episode-content">
+          <h3>Описание</h3>
+          <p>
+            В мировом релизе данная серия была выпущена 10 октября 2010 года. В России же она была впервые показана в эфире телеканала &quot;Карусель&quot;, 2 января 2012 года.<br>
+            Эта серия является <u>самой первой</u> в рамках всего мультсериала.<br>
+            Также она является дебютной для следующих персонажей:<br>
+            <ul>
+                <li>Искорка</li>
+                <li>Флаттершай</li>
+                <li>Пинки Пай</li>
+                <li>Рэйнбоу Дэш</li>
+                <li>Эппл Джэк</li>
+                <li>Рарити</li>
+                <li>Спайк</li>
+                <li>Принцесса Селестия</li>
+                <li>Лунная пони</li>
+            </ul>
+          </p>
+
+          <h3>Синопсис</h3>
+          <p>
+            В этой серии происходит первое знакомство Искорки с главными героями, ныне входящие в состав &quot;Главной Шестёрки&quot;.<br>
+            Вместе с тем, выясняется, что в Эквестрии - волшебной стране, в которую прибыла Искорка -, случилось страшное: из-за действий Лунной пони, во всей Эквестрии наступила вечная ночь, и Искорке предстоит сделать так, чтобы она прошла как можно скорее.
+          </p>
+
+          <h3>Полный сюжет</h3>
+          <h4>Предыстория</h4>
+          <p>
+            Серия начинается с краткой истории волшебной страны под названием Эквестрия. С давних времён там правит две сестры, каждая из которых занимается лишь своей деятельностью: принцесса Селестия отвечает за стабильное дневное время, а принцесса Лу́на - за ночное.<br>
+            Однако, в один из дней, случилось тревожное дело. Все пони в Эквестрии вовсю веселились на своих местах на протяжении всего дня, а это обычно всегда означает то, что нужен отдых. Но, под влиянием тёмной лунной энергии, принцесса Лу́на, по факту, против своей воли, отказала Селестии в том, чтобы вовремя уступить место Солнцу.<br>
+            И чтобы тёмная энергия не захватила Эквестрии окончательно, Селестия применила мощную магию элементов Гармонии.<br>
+            В результате получилось спасти всю страну от вечной ночи, как и сестру от влияния тёмной энергии. Во всяком случае, все думали, что это будет навсегда, но никто не ожидал, что спустя века это повторится вновь.
+          </p>
+
+          <p style="opacity: 0.6;"><small><i>(Страница дополняется, пожалуйста, подождите...)</i></small></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="bottom-info">сайт сделал <b>КирOFF</b>, 2026 г.</p>
+    </footer>
+
+    <script>
+      const btn = document.getElementById('theme-toggle');
+
+      const applyTheme = (isDark) => {
+        if (isDark) {
+          document.body.classList.add('dark-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark-theme');
+          localStorage.setItem('theme', 'light');
+        }
+      };
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        applyTheme(true);
+      }
+
+      btn.addEventListener('click', () => {
+        const isDark = document.body.classList.toggle('dark-theme');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    </script>
+  </body>
+</html>

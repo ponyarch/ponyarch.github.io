@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%; /* Оставляем 100% для корректной работы Flex-контейнера */
+  height: 100%;
 }
 
 body {
@@ -14,12 +14,11 @@ body {
 }
 
 .wrapper {
-  flex: 1; /* Растягивается на всё доступное пространство */
+  flex: 1;
 }
 
-/* Остальные стили оставляем как были */
 :root {
-  --bg-gradient: linear-gradient(135deg,rgb(205, 250, 178) 0%, rgb(169, 226, 131) 100%) no-repeat;
+  --bg-gradient: linear-gradient(135deg, rgb(205, 250, 178) 0%, rgb(169, 226, 131) 100%) no-repeat fixed;
   --text-color: rgb(3, 8, 0);
   --menu-color: rgba(0, 0, 0, 25%);
 }
@@ -29,7 +28,7 @@ body {
 }
 
 body.dark-theme {
-  --bg-gradient: linear-gradient(135deg,rgba(3, 8, 0, 1) 0%, rgb(8, 20, 0) 100%) no-repeat;
+  --bg-gradient: linear-gradient(135deg, rgba(3, 8, 0, 1) 0%, rgb(8, 20, 0) 100%) no-repeat fixed;
   --text-color: #fff;
   --menu-color: rgba(255, 255, 255, 10%);
 }
@@ -51,7 +50,6 @@ body.dark-theme img.full-icon, body.dark-theme img.menu-logo {
   text-decoration: none;
   font-size: 1.2rem; /* Увеличенный размер шрифта */
   margin-left: 3rem;
-  transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -66,14 +64,15 @@ body.dark-theme img.full-icon, body.dark-theme img.menu-logo {
   display: flex;
 }
 
-p {
-  font-family: Roboto, Arial, sans-serif;
+p, ul {
+  font-family: "Neucha", cursive;
   font-weight: 400;
   font-style: normal;
+  font-size: 1.25em;
 }
 
-p.funny {
-  font-family: "Neucha", cursive;
+p.normal {
+  font-family: Roboto, Arial, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 1.25em;
@@ -89,9 +88,23 @@ p.bottom-info {
 
 h2 {
   font-family: "Neucha", cursive;
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
   font-size: 2.25em;
+}
+
+h3 {
+  font-family: "Neucha", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5em;
+}
+
+h4 {
+  font-family: "Neucha", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.25em;
 }
 
 .logo {
