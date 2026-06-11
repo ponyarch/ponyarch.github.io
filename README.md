@@ -1,2 +1,1 @@
-# site
-PonyArch site frontend.
+Здесь находится исходный код "внешней" стороны сайта PonyArch.
