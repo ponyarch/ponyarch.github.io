@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fff;
+            color: #000;
+        }
+        .container {
+            margin-top: -1em;
+        }
+        h1 {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 0.25em;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #d3d3d3;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 100%;
+        }
+        .footer {
+            margin-top: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>404 Not Found</h1>
+    </div>
+    
+    <hr>
+    
+    <div class="footer">ponyback/2026.12.26</div>
+
+    <script>
+        const randomNumber = Math.floor(Math.random() * 10) + 1;
+
+        const targetNumber = 10;
+
+        if (randomNumber === targetNumber) {
+            const heading = document.querySelector('div.container h1');
+
+            heading.textContent = 'This page literally DOES NOT exist here.';
+        }
+    </script>
+</body>
+</html>
